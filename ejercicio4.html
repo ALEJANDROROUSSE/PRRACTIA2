@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estacionamiento</title>
+    <link rel="stylesheet" href="diseño2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Estacionamiento</h1>
+        <form id="parking-form">
+            <label for="day">Día de la semana:</label>
+            <select id="day" name="day">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miércoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sábado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+
+            <label for="entry-time">Hora de entrada:</label>
+            <div class="time-input">
+                <input type="number" id="entry-hour" name="entry-hour" min="1" max="12" placeholder="HH" required>
+                <span>:</span>
+                <input type="number" id="entry-minute" name="entry-minute" min="0" max="59" placeholder="MM" required>
+                <select id="entry-period" name="entry-period" required>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <label for="exit-time">Hora de salida:</label>
+            <div class="time-input">
+                <input type="number" id="exit-hour" name="exit-hour" min="1" max="12" placeholder="HH" required>
+                <span>:</span>
+                <input type="number" id="exit-minute" name="exit-minute" min="0" max="59" placeholder="MM" required>
+                <select id="exit-period" name="exit-period" required>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="calculateParking()">Calcular</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
